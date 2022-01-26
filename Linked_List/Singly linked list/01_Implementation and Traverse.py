@@ -4,7 +4,7 @@ class Node:
         self.data = data   #assign data
         self.next = None   #initialise next as null
 
-#linked list class contain node object
+#linked list class contains a node object
 class Linked_list:
     #function to initialise head
     def __init__(self):
