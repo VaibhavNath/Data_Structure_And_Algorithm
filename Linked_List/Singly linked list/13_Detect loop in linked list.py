@@ -22,8 +22,12 @@ class Linkedlist:
         s=set()
         temp=self.head
         while temp:
+
+            #if we have this node in list that means there is a cycle because we are encountering node second time
             if temp in s:
                 return True
+
+            #if seeing node for first time, add it to set
             s.add(temp)
             temp = temp.next
         return False

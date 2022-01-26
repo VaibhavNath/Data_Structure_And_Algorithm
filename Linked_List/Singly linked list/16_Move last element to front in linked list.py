@@ -23,18 +23,19 @@ class Linked_list:
     def movetofront(self):
         temp = self.head
         second_last = None
+
+        #chcek for empty list or one node list
         if not temp or not temp.next:
             return 
         while temp and temp.next:
             second_last = temp
             temp = temp.next
 
-            second_last.next = None
-            temp.next = self.head
-            self.head = temp
+        second_last.next = None
+        temp.next = self.head
+        self.head = temp
 
     
-
 list = Linked_list()
 
 list.push(1)
@@ -51,3 +52,4 @@ list.print_list()
 list.movetofront()
 print('\nlist after moving element:')
 list.print_list()
+
