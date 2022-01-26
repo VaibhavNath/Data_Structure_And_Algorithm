@@ -22,31 +22,30 @@ class Linked_list:
         new_node.next = self.head
         self.head = new_node
 
-    def InsertAfter(self, prev_node, new_data):
-        #check if prev_node exists
-        if prev_node is None:
-            print("Given prev node is not in list")
+    def deleteNode(self, key):
+        temp=self.head
+
+        #if head itself hold key to be deleted
+        if temp:
+            if temp.data == key:
+                self.head = temp.next
+                temp = None
+                return
+
+        #search for key to be deleted,keep track of prev_node
+        while (temp):
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next 
+
+        #if key is not present in list
+        if temp == None:
             return
 
-        new_node = Node(new_data)
-        new_node.next = prev_node.next
-        prev_node.next = new_node
-
-    def Append(self, new_data):
-        new_node = Node(new_data)
-
-        #if head is none make newnode as head
-        if self.head is None:
-            self.head = new_node
-            return
-        
-        #else traverse the list till last node
-        last = self.head
-        while (last.next):
-            last = last.next
-
-        last.next=new_node  
-      
+        #unlink node from linked list
+        prev.next = temp.next
+        temp =None
 
 list = Linked_list()
 
@@ -58,11 +57,7 @@ list.push(4)
 print("original list: ")
 list.print_list()
 
-list.InsertAfter(list.head.next,7)
-print("\nlist after insertion of new node is: ")
-list.print_list()
-
-list.Append(10)
+list.deleteNode(2)
 print('\nNew list: ')
 list.print_list()
 
@@ -70,7 +65,5 @@ list.print_list()
 
 # original list: 
 # 4 3 2 1 
-# list after insertion of new node is: 
-# 4 3 7 2 1 
 # New list: 
-# 4 3 7 2 1 10 
+# 4 3 1 
