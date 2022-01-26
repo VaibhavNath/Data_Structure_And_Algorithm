@@ -1,3 +1,5 @@
+from sqlalchemy import false
+
 class Node:
     def __init__(self, data):
         self.data = data   
@@ -18,13 +20,19 @@ class Linked_list:
         new_node.next = self.head
         self.head = new_node
 
-    def search(self, x):
-        current = self.head
-        while current:
-            if current.data == x:
-                return True
-            current = current.next
-        return False
+    def movetofront(self):
+        temp = self.head
+        second_last = None
+        if not temp or not temp.next:
+            return 
+        while temp and temp.next:
+            second_last = temp
+            temp = temp.next
+
+            second_last.next = None
+            temp.next = self.head
+            self.head = temp
+
     
 
 list = Linked_list()
@@ -33,18 +41,13 @@ list.push(1)
 list.push(2)
 list.push(3)
 list.push(4)
-list.push(8)
-list.push(12)
+list.push(3)
+list.push(2)
+list.push(1)
 
 print("Original list: ")
 list.print_list()
 
-print('\n',list.search(4))
-print('\n',list.search(10))
-
-
-# Original list: 
-# 12 8 4 3 2 1 
-#  True
-
-#  False
+list.movetofront()
+print('\nlist after moving element:')
+list.print_list()

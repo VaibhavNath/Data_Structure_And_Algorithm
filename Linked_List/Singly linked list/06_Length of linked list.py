@@ -26,8 +26,7 @@ class Linked_list:
             temp = temp.next
         print ("\nNumber of nodes in linked list:", count)
     
-
-
+    
 list = Linked_list()
 
 list.push(1)

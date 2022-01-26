@@ -27,8 +27,7 @@ class Linked_list:
             fast = fast.next.next
         print('Middle element is:' , slow.data)
 
-    
-    
+        
 list = Linked_list()
 
 list.push(1)
@@ -43,3 +42,8 @@ print("Original list: ")
 list.print_list()
 
 list.Middle()
+
+
+# Original list: 
+# 12 -> 8 -> 54 -> 4 -> 3 -> 2 -> 1 -> NULL
+# Middle element is: 4

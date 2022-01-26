@@ -27,8 +27,7 @@ class Linked_list:
                 count +=1
             current = current.next
         print(f'\nNumber of times the given element {key} occurs in linked list is:' , count)
-        return count
-
+        
         
 list = Linked_list()
 
@@ -47,5 +46,5 @@ list.Count(3)
 
 
 # Original list: 
-# 12 -> 8 -> 54 -> 4 -> 3 -> 2 -> 1 -> NULL
-# Middle element is: 4
+# 12 3 54 4 3 2 1 
+# Number of times the given element 3 occurs in linked list is: 2

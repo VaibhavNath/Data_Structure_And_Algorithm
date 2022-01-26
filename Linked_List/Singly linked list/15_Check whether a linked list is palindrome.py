@@ -38,7 +38,6 @@ class Linked_list:
         return ispalin
     
 
-
 list = Linked_list()
 
 list.push(1)
@@ -53,3 +52,9 @@ print("Original list: ")
 list.print_list()
 
 print('\n',list.is_palindrome())
+
+
+
+# Original list: 
+# 1 2 3 4 3 2 1 
+#  True
