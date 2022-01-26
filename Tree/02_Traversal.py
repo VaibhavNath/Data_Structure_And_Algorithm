@@ -15,8 +15,6 @@ class BinaryTree(object):
             return self.preorder_print(tree.root, "")
         if traversal_type == "postorder":
             return self.postorder_print(tree.root, "")
-
-
     
 
     def preorder_print(self, start, traversal):
