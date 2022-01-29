@@ -40,7 +40,6 @@ class Doublycircularlinkedlist:
         gc.collect
 
    
-
   
 list = Doublycircularlinkedlist()
 list.push(1)
@@ -59,3 +58,11 @@ list.printlist()
 list.delete(list.head.next)
 print("\nlist after deletion is:")
 list.printlist()
+
+
+# original list:
+# 5 4 3 2 1 
+# list after deletion is:
+# 4 3 2 1 
+# list after deletion is:
+# 4 2 1 
