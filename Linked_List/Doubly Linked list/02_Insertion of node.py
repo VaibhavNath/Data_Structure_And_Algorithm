@@ -66,7 +66,6 @@ class Doublycircularlinkedlist:
         new_node.prev = last
 
   
-
 list = Doublycircularlinkedlist()
 list.push(1)
 list.push(2)
@@ -85,3 +84,10 @@ list.append(10)
 print("\nlist after insertion of 10 is:")
 list.printlist()
 
+
+# original list:
+# 5 4 3 2 1 
+# list after insertion of 8 is:
+# 5 4 3 8 2 1 
+# list after insertion of 10 is:
+# 5 4 3 8 2 1 10 
