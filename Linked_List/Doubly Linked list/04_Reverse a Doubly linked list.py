@@ -53,3 +53,10 @@ list.printlist()
 list.Reverse()
 print("\nlist after reverse:")
 list.printlist()
+
+
+
+# original list:
+# 5 4 3 2 1 
+# list after reverse:
+# 1 2 3 4 5 

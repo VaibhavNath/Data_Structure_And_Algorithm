@@ -31,6 +31,17 @@ class Circularlinkedlist:
                 if (temp == self.head):
                     break
 
+    def Circular(self):
+        if self.head == None:
+            return True
+
+        node = self.head.next
+        i=0
+        while ((node !=None) and (node != self.head)):
+            i = i+1
+            node = node.next
+        return (node == self.head)
+
 list=Circularlinkedlist()
 list.push(1)                
 list.push(2)                
@@ -39,6 +50,12 @@ list.push(4)
 list.push(5)
 
 list.printlist()
+if list.Circular():
+    print("\nyes")
+else:
+    print("\nno")
 
 
+
+# 5 4 3 2 1
             
