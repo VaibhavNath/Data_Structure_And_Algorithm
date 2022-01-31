@@ -41,4 +41,5 @@ list.push(5)
 list.printlist()
 
 
+# 5 4 3 2 1
             

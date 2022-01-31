@@ -15,3 +15,10 @@ rotate(arr, n)
 print("\narray after rotation is:")
 for i in range(0, len(arr)):
         print(arr[i], end=" ")
+
+
+
+# given array is: 
+# 1 2 3 4 5 6 7 
+# array after rotation is:
+# 7 1 2 3 4 5 6 
